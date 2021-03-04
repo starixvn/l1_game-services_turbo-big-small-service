@@ -1,10 +1,10 @@
 export default {
     id: 1,
-    name: "taixiu",
+    name: "TXTurbo",
     durations: {
-        wholeRound: 61,
-        placingBets: 50,
-        balancingBetTime: 9,
+        wholeRound: 36,
+        placingBets: 30,
+        balancingBetTime: 3,
         lockingBet: 5,
     },
     choices: ["big", "small"],
