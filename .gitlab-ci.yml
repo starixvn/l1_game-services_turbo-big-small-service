@@ -1,7 +1,7 @@
 variables:
-  SERVICE_WORKING_PATH: /l1/big-small-service/
-  SERVICE_NAME: l1-big-small-service
-  DOCKER_IMAGE_PATH: l1/game-services/big-small-service
+  SERVICE_WORKING_PATH: /l1/turbo-big-small-service/
+  SERVICE_NAME: l1-turbo-big-small-service
+  DOCKER_IMAGE_PATH: l1/game-services/turbo-big-small-service
   
 include:
   - project: "ci/luminet/common-ci"
