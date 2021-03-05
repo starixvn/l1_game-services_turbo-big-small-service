@@ -20,6 +20,7 @@ const betLog = {
 
 const bet = {
     ...betLog,
+    odds: { type: Object },
     totalAmount: { type: Number, default: 0 },
 };
 
