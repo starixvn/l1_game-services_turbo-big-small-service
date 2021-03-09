@@ -1,9 +1,4 @@
-variables:
-  SERVICE_WORKING_PATH: /l1/turbo-big-small-service/
-  SERVICE_NAME: l1-turbo-big-small-service
-  DOCKER_IMAGE_PATH: l1/game-services/turbo-big-small-service
-  
 include:
-  - project: "ci/luminet/common-ci"
-    ref: L1
-    file: "game-service-nodejs-ci/gitlab-ci.yml"
+  - project: "ci/repos-ci/pentagon_l1_turbo_big_small_service"
+    ref: master
+    file: "gitlab-ci.yml"

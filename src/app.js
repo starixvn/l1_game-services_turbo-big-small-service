@@ -5,11 +5,7 @@ import appConfigs from "./app-configs";
 import TurboBigSmallContainerRegistry from "./container-registry";
 import gameSettings from "./game-settings";
 import { random } from "./helpers";
-
-const settlementRuleEntries = Object.entries({
-    big: (totalPoints) => totalPoints > 10,
-    small: (totalPoints) => totalPoints <= 10,
-});
+import { getSettlementResult } from "./settlement-rule";
 
 const generateResult = () => {
     const dice1 = random();
@@ -17,16 +13,6 @@ const generateResult = () => {
     const dice3 = random();
 
     return { dice1, dice2, dice3 };
-};
-
-const getSettlementResult = (roundResult) => {
-    const totalPoints = Object.values(roundResult).reduce((accumulator, currentValue) => accumulator + currentValue);
-
-    return settlementRuleEntries.reduce((result, [choice, rule]) => {
-        result[choice] = rule(totalPoints);
-
-        return result;
-    }, {});
 };
 
 const run = async () => {
