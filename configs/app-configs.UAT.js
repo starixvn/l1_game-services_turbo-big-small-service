@@ -1,5 +1,5 @@
 export default {
-    hostingPort: 7001,
+    hostingPort: 5000,
     apiSettings: {
         enabledApi: true,
         apiUrl: "http://10.2.189.51:7300",
@@ -41,7 +41,7 @@ export default {
     },
     sentry: {
         sentryUrl: "http://82639a7dd711457c994b1a5326d796bc@10.99.99.187:800/225",
-        logIdentifier: "big-small",
+        logIdentifier: "turbo-big-small",
         env: "UAT",
     },
     authenticateSettings: {
