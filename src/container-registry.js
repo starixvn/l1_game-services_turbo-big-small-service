@@ -2,7 +2,7 @@ import { asClass, asValue } from "awilix";
 import { ContainerRegistry } from "sc-pool-betting-game-base";
 
 import { TurboBigSmallBetLogs, TurboBigSmallBets, TurboBigSmallRounds } from "./models";
-import { TurboBigSmallRoundQuery } from "./query-apis";
+import { TurboBigSmallRoundQuery, TurboBigSmallHistoryQuery } from "./query-apis";
 
 export default class TurboBigSmallContainerRegistry extends ContainerRegistry {
     registerModels() {
@@ -20,6 +20,7 @@ export default class TurboBigSmallContainerRegistry extends ContainerRegistry {
 
         this.container.register({
             roundQuery: asClass(TurboBigSmallRoundQuery).singleton(),
+            historyQuery: asClass(TurboBigSmallHistoryQuery).singleton(),
         });
     }
 }

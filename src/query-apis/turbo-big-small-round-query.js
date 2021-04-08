@@ -14,4 +14,19 @@ export class TurboBigSmallRoundQuery extends RoundQuery {
             dice3: round.dice3,
         };
     }
+
+    convertBetLogs(betLogs) {
+        return betLogs.map((betLog) => {
+            if (betLog.bet) {
+                const convertedBet = {
+                    amount: betLog.bet,
+                    choice: betLog.select ? "big" : "small",
+                    refund: betLog.tralai,
+                };
+                return { ...betLog, ...convertedBet };
+            }
+
+            return betLog;
+        });
+    }
 }
