@@ -41,7 +41,7 @@ export default {
         },
     },
     sentry: {
-        sentryUrl: "http://71b1f8f26684417e958f3d290f207d07@10.99.99.187:800/250",
+        sentryUrl: "http://7ba626fc5eea40709545d4adf36975c6@10.99.99.187:800/29",
         logIdentifier: "turbo-big-small",
         env: "UAT",
     },
