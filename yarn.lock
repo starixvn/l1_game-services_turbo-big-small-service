@@ -6021,10 +6021,10 @@ sc-common@^1.6.0:
     mongoose-long "^0.3.0"
     numeral "^2.0.6"
 
-sc-game-base@1.21.2-beta.8:
-  version "1.21.2-beta.8"
-  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-1.21.2-beta.8.tgz#8deb117126cde6c29939d30fe4ac284fd08c0dcc"
-  integrity sha512-BLWLES1AN+VAcq57rpx5FfoH0S0rUr1CDgzSnjXv2u0BjKgn30NAQQpboQLlDZhfSqTsemN2dnLHsTeDzTbQDg==
+sc-game-base@~1.21.2-beta.12:
+  version "1.21.2-beta.12"
+  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-1.21.2-beta.12.tgz#707d79ac96871cdcbacd3a8a606cfa4d269c6414"
+  integrity sha512-PWkhve/7Nx6VsztVXCj05R5g/WPNSaYODwRgBurXz2qkAXb1cb/jKDvR5NPuq3xmvN/ayMmFUrDqtnxwc/7f+g==
   dependencies:
     awilix "^4.3.1"
     axios "^0.20.0"
@@ -6043,13 +6043,13 @@ sc-game-base@1.21.2-beta.8:
     sc-common "1.6.1-beta.1"
     socket.io "^2.3.0"
 
-sc-pool-betting-game-base@1.1.4-beta.1:
-  version "1.1.4-beta.1"
-  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-1.1.4-beta.1.tgz#14ff7f4c63d71d55cd2c84b4cd67ad14dcd418c4"
-  integrity sha512-6jOwAHSCU+kON7drMBRGziILMf8XDDh9d4TY6byk+oR1LVWnQwaOMV2nJH/3L+FCMqZ1jSuvkrT3QbSdDNupGQ==
+sc-pool-betting-game-base@1.1.4-beta.3:
+  version "1.1.4-beta.3"
+  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-1.1.4-beta.3.tgz#fa8539ea351c5f8b08a815049804cb863dfec425"
+  integrity sha512-1YiNM3L2k76VRYtFHAd1/xtiMHEJZ4u9bSBZ/kO5pg9b+mPn2dVhAQp7U1Y8CNcKLy6eZyne1qeroyv4VMqeLQ==
   dependencies:
     chance "^1.1.7"
-    sc-game-base "1.21.2-beta.8"
+    sc-game-base "~1.21.2-beta.12"
 
 sc-semantic-release@^1.1.0:
   version "1.2.0"
