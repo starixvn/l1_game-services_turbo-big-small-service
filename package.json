@@ -18,7 +18,7 @@
         "nodemon": "^2.0.4",
         "random": "^2.2.0",
         "random-js": "^2.1.0",
-        "sc-pool-betting-game-base": "~1.1.4-beta.7"
+        "sc-pool-betting-game-base": "~1.1.4-beta.8"
     },
     "devDependencies": {
         "@commitlint/cli": "^9.1.2",
