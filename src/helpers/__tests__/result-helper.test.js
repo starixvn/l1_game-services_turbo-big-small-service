@@ -51,5 +51,6 @@ describe("generateResult tests", () => {
 
         // assert
         expect(Object.keys(result).length).toBe(3);
+        expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
     });
 });
