@@ -2,9 +2,9 @@ import { Core } from "sc-game-base";
 import { GameData } from "sc-pool-betting-game-base";
 
 import appConfigs from "./app-configs";
-import TurboBigSmallContainerRegistry from "./container-registry";
 import gameSettings from "./game-settings";
 import { generateResult, getSettlementResult } from "./helpers/";
+import TurboBigSmallContainerRegistry from "./turbo-big-small-container-registry";
 
 const run = async () => {
     const gameData = new GameData(gameSettings.durations.wholeRound);
