@@ -1,4 +1,4 @@
-import { asClass, asValue } from "awilix";
+import { asValue } from "awilix";
 import { ContainerRegistry } from "sc-pool-betting-game-base";
 
 import { TurboBigSmallBetLogs, TurboBigSmallBets, TurboBigSmallRounds } from "./models";
