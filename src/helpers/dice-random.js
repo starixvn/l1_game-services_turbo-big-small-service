@@ -4,7 +4,8 @@ import { MersenneTwister19937, Random as RandomJS } from "random-js";
 
 const random1 = () => {
     const chance = new Chance();
-    return Math.floor(chance.integer({ min: 0, max: 1 }) * 6) + 1;
+
+    return Math.min(1, Math.floor(chance.floating({ min: 0, max: 1 }) * 6));
 };
 const random2 = () => {
     const chance = new Chance();
