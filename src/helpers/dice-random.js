@@ -2,28 +2,28 @@ import Chance from "chance";
 import Random from "random";
 import { MersenneTwister19937, Random as RandomJS } from "random-js";
 
-const random1 = () => {
+export const random1 = () => {
     const chance = new Chance();
 
-    return Math.min(1, Math.floor(chance.floating({ min: 0, max: 1 }) * 6));
+    return Math.max(1, Math.floor(chance.floating({ min: 0, max: 1 }) * 6));
 };
-const random2 = () => {
+export const random2 = () => {
     const chance = new Chance();
 
     return chance.d6();
 };
 
-const random3 = () => {
+export const random3 = () => {
     const chance = new Chance();
 
     return chance.integer({ min: 1, max: 6 });
 };
 
-const random4 = () => {
+export const random4 = () => {
     return Random.int(1, 6);
 };
 
-const random5 = () => {
+export const random5 = () => {
     const randomJS = new RandomJS(MersenneTwister19937.autoSeed());
 
     return randomJS.integer(1, 6);
