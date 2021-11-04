@@ -10,9 +10,10 @@ const run = async () => {
     const gameData = new GameData(gameSettings.durations.wholeRound);
     const definition = new Core.GameDefinition(gameSettings, generateResult, getSettlementResult);
     const container = new TurboBigSmallContainerRegistry().register(appConfigs, definition, gameData);
-    const app = new Core.BaseGameApp(container);
+    const app = new Core.BaseGameApp("TurboBigSmall", appConfigs);
 
     await app.run();
+    await app.startGame(container);
 };
 
 run();
