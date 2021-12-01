@@ -15,6 +15,8 @@ const betLog = {
     win: { type: Boolean, default: false },
     betwin: { type: Number, default: 0 },
     baseBetWin: { type: Number, default: 0 },
+    totalWin: { type: Number, default: 0 },
+    baseTotalWin: { type: Number, default: 0 },
     time: { type: Date },
     odds: { type: Object },
 
