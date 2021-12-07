@@ -1,3 +1,6 @@
+variables:
+  SMOKE_PRODUCT_NAME: TurboBigSmall
+
 include:
   - project: "ci/repos-ci/pentagon_l1_turbo_big_small_service"
     ref: master

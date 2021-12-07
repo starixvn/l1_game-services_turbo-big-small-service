@@ -7,16 +7,24 @@ const betLog = {
 
     choice: { type: String, required: true },
     amount: { type: Number, required: true },
+    baseAmount: { type: Number, required: true },
 
     thanhtoan: { type: Boolean, default: false },
     refund: { type: Number, default: 0 },
+    baseRefund: { type: Number, default: 0 },
     win: { type: Boolean, default: false },
     betwin: { type: Number, default: 0 },
+    baseBetWin: { type: Number, default: 0 },
+    totalWin: { type: Number, default: 0 },
+    baseTotalWin: { type: Number, default: 0 },
     time: { type: Date },
     odds: { type: Object },
 
     memberId: { type: Number },
     siteId: { type: String },
+    currency: { type: String, require: true },
+    rate: { type: Number, require: true },
+    partnerId: { type: String, require: true },
 };
 
 const bet = {
