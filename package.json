@@ -7,12 +7,13 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "test": "jest",
-        "test-coverage": "jest --collect-coverage",
+        "test": "jest --testPathPattern=tests/unit-tests/",
+        "test-coverage": "jest --collect-coverage --testPathPattern=tests/unit-tests/",
+        "integration-test": "jest --testPathPattern=tests/integration-tests/ --ci --reporters=default --reporters=jest-junit --forceExit",
         "dev": "nodemon --es-module-specifier-resolution=node --watch ./src ./src/app.js",
         "debug": "nodemon --es-module-specifier-resolution=node --watch ./ --inspect ./src/app.js",
         "prod": "node --max-old-space-size=8192 --es-module-specifier-resolution=node ./src/app.js",
-        "reg": "npm set registry http://npm.lumigame.com"
+        "reg": "npm set registry https://npm.lumigame.com"
     },
     "jestSonar": {
         "reportPath": "reports",
@@ -24,9 +25,10 @@
         "nodemon": "^2.0.4",
         "random": "^2.2.0",
         "random-js": "^2.1.0",
-        "sc-pool-betting-game-base": "2.1.1"
+        "sc-pool-betting-game-base": "2.2.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.0.0",
         "@babel/preset-env": "^7.12.11",
         "@commitlint/cli": "^9.1.2",
         "@commitlint/config-conventional": "^9.1.2",
@@ -42,8 +44,10 @@
         "install": "^0.13.0",
         "jest": "^26.6.3",
         "jest-extended": "^0.11.5",
+        "jest-junit": "^13.0.0",
         "jest-micro-auto-stub": "^1.0.6",
         "jest-sonar-reporter": "^2.0.0",
+        "sc-game-service-integration-utils": "1.0.0",
         "sc-semantic-release": "^1.1.0",
         "semantic-release": "^17.1.1"
     },
@@ -51,5 +55,8 @@
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
+    },
+    "jest": {
+        "testResultsProcessor": "jest-junit"
     }
 }

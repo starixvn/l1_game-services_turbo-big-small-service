@@ -1,4 +1,4 @@
-import { random1, random2, random3, random4, random5 } from "../dice-random";
+import { random1, random2, random3, random4, random5 } from "../../../src/helpers/dice-random";
 
 describe("random functions tests", () => {
     it("random1 should return correct value of dice", () => {
