@@ -6,17 +6,23 @@ include:
     ref: master
     file: "gitlab-ci.yml"
 
-.if-deploy-local: &if-deploy-local
-  if: '$CI_COMMIT_TAG =~ /local/'
+unit-test-js:
+  artifacts:
+    reports:
+      junit: coverage/*.xml
+      cobertura: coverage/cobertura-coverage.xml
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
+      when: never
+    - if: '$CI_COMMIT_BRANCH'
 
-.if-deploy-sit: &if-deploy-sit
-  if: '$CI_COMMIT_TAG =~ /sit/'
-
-.if-deploy-uat: &if-deploy-uat
-  if: '$CI_COMMIT_TAG =~ /uat/'
-
-.if-deploy-prod: &if-deploy-prod
-  if: '$CI_COMMIT_TAG =~ /prod/'
+sonarqube-check:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
+      when: never
+    - if: '$CI_COMMIT_BRANCH'
 
 integration-tests:
   stage: test
@@ -39,15 +45,11 @@ integration-tests:
     - npm run integration-test
 
   rules:
-    - <<: *if-deploy-local
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
       when: never
-    - <<: *if-deploy-sit
-      when: never
-    - <<: *if-deploy-uat
-      when: never
-    - <<: *if-deploy-prod
-      when: never
-    - when: always
+    - if: '$CI_COMMIT_BRANCH'
+
 
   artifacts:
     when: always
@@ -57,9 +59,3 @@ integration-tests:
       junit:
         - junit.xml
     expire_in: 1 day
-
-unit-test-js:
-  artifacts:
-    reports:
-      junit: coverage/*.xml
-      cobertura: coverage/cobertura-coverage.xml

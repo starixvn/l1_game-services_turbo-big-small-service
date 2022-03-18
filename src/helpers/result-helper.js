@@ -22,3 +22,7 @@ export const getSettlementResult = (roundResult) => {
         return result;
     }, {});
 };
+
+export const generateRawResultForMd5 = (roundResult) => {
+    return `{${+roundResult.dice1},${+roundResult.dice2},${+roundResult.dice3}}`;
+};
