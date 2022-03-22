@@ -119,7 +119,7 @@ describe("BigSmall Service", () => {
             });
         });
 
-        it("should return user information", () => {
+        it("should return user information", (done) => {
             // Assert
             normalUserClientDriver.handleInGameEvent((inGameData) => {
                 if (inGameData?.user?.UID) {
