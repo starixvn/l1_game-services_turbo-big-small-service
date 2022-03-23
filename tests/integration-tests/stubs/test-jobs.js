@@ -1,6 +1,6 @@
 import { spawn } from "child_process";
 
-export const startSetupDataProcess = () => {
+export const startSetupDataProcess = (onSetupDataDone) => {
     const setupDataProcess = spawn("node", ["--es-module-specifier-resolution=node", "./tests/integration-tests/stubs/test-data-setup.js"]);
 
     setupDataProcess.stdout.on("data", (data) => {
@@ -12,6 +12,7 @@ export const startSetupDataProcess = () => {
     });
 
     setupDataProcess.on("close", (code) => {
+        onSetupDataDone && onSetupDataDone();
         console.log(`child process exited with code ${code}`);
     });
 
