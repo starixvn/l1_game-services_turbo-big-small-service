@@ -1,6 +1,6 @@
 import Chance from "chance";
 
-import { generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
+import { generateRawResultForMd5, generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
 
 describe("getSettlementResult tests", () => {
     const chance = new Chance();
@@ -52,5 +52,18 @@ describe("generateResult tests", () => {
         // assert
         expect(Object.keys(result).length).toBe(3);
         expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+    });
+});
+
+describe("generateRawResultForMd5", () => {
+    it("should format result in unicode", () => {
+        // Arrange
+        const roundResult = { dice1: 1, dice2: 2, dice3: 3 };
+
+        // Act
+        const actualResult = generateRawResultForMd5(roundResult);
+
+        // Assert
+        expect(actualResult).toStrictEqual("{⚀⚁⚂}");
     });
 });
