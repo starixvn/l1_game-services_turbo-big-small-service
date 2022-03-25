@@ -5,15 +5,6 @@ const settlementRuleEntries = Object.entries({
     small: (totalPoints) => totalPoints <= 10,
 });
 
-const resultSymbols = {
-    1: "⚀",
-    2: "⚁",
-    3: "⚂",
-    4: "⚃",
-    5: "⚄",
-    6: "⚅",
-};
-
 export const generateResult = () => {
     const dice1 = random();
     const dice2 = random();
@@ -33,5 +24,5 @@ export const getSettlementResult = (roundResult) => {
 };
 
 export const generateRawResultForMd5 = (roundResult) => {
-    return `{${resultSymbols[+roundResult.dice1]}${resultSymbols[+roundResult.dice2]}${resultSymbols[+roundResult.dice3]}}`;
+    return `{${+roundResult.dice1},${+roundResult.dice2},${+roundResult.dice3}}`;
 };

@@ -64,6 +64,6 @@ describe("generateRawResultForMd5", () => {
         const actualResult = generateRawResultForMd5(roundResult);
 
         // Assert
-        expect(actualResult).toStrictEqual("{⚀⚁⚂}");
+        expect(actualResult).toStrictEqual("{1,2,3}");
     });
 });
