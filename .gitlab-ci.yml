@@ -11,22 +11,11 @@ unit-test-js:
     reports:
       junit: coverage/*.xml
       cobertura: coverage/cobertura-coverage.xml
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
-      when: never
-    - if: '$CI_COMMIT_BRANCH'
-
-sonarqube-check:
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
-      when: never
-    - if: '$CI_COMMIT_BRANCH'
 
 integration-tests:
   stage: test
   needs: ['unit-test-js']
+  when: on_success
   tags:
     - docker
 
@@ -40,16 +29,13 @@ integration-tests:
     - cp ./configs/app-configs.IGT.js ./src/app-configs.js
     - npm set registry https://npm.lumigame.com
     - yarn install
-
   script:
     - npm run integration-test
-
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
       when: never
     - if: '$CI_COMMIT_BRANCH'
-
 
   artifacts:
     when: always
