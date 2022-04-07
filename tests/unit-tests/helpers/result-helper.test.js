@@ -45,13 +45,37 @@ describe("getSettlementResult tests", () => {
 });
 
 describe("generateResult tests", () => {
-    it("should return enough results", () => {
-        // act
-        var result = generateResult();
+    describe("when not passing mode", () => {
+        it("should return enough results", () => {
+            // act
+            var result = generateResult();
 
-        // assert
-        expect(Object.keys(result).length).toBe(3);
-        expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+            // assert
+            expect(Object.keys(result).length).toBe(3);
+            expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+        });
+    });
+
+    describe("when not passing a out of range mode", () => {
+        it("should return enough results", () => {
+            // act
+            var result = generateResult(10);
+
+            // assert
+            expect(Object.keys(result).length).toBe(3);
+            expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+        });
+    });
+
+    describe("when not passing a valid mode", () => {
+        it("should return enough results", () => {
+            // act
+            var result = generateResult(2);
+
+            // assert
+            expect(Object.keys(result).length).toBe(3);
+            expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+        });
     });
 });
 

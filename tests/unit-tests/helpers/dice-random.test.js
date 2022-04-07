@@ -1,4 +1,4 @@
-import { random1, random2, random3, random4, random5 } from "../../../src/helpers/dice-random";
+import { random1, random2, random3, random4, random5, random6 } from "../../../src/helpers/dice-random";
 
 describe("random functions tests", () => {
     it("random1 should return correct value of dice", () => {
@@ -40,6 +40,15 @@ describe("random functions tests", () => {
     it("random5 should return correct value of dice", () => {
         // act
         var dice = random5();
+
+        // assert
+        expect(dice).toBeGreaterThanOrEqual(1);
+        expect(dice).toBeLessThanOrEqual(6);
+    });
+
+    it("random6 should return correct value of dice", () => {
+        // act
+        var dice = random6();
 
         // assert
         expect(dice).toBeGreaterThanOrEqual(1);

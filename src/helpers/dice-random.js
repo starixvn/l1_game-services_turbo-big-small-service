@@ -1,6 +1,7 @@
 import Chance from "chance";
 import Random from "random";
 import { MersenneTwister19937, Random as RandomJS } from "random-js";
+import { randomInt } from "crypto";
 
 export const random1 = () => {
     return Math.floor(Math.random() * 6) + 1;
@@ -25,10 +26,19 @@ export const random5 = () => {
     return randomJS.integer(1, 6);
 };
 
-const randomFunctions = [random1, random2, random3, random4, random5];
+export const random6 = () => {
+    return randomInt(1, 7);
+};
 
-export const random = () => {
-    const selectedRandomMethodIndex = Math.floor(Math.random() * (randomFunctions.length - 1));
+export const randomModes = {
+    1: [random1, random2, random3, random4, random5],
+    2: [random1, random2, random3, random6],
+    3: [random4, random5, random6],
+};
+
+export const random = (mode) => {
+    const randomFunctions = randomModes[mode];
+    const selectedRandomMethodIndex = Math.floor(Math.random() * randomFunctions.length);
     const randomFunction = randomFunctions[selectedRandomMethodIndex];
 
     return randomFunction();
