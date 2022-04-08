@@ -2,7 +2,7 @@ import { Core } from "sc-game-base";
 import { initAPIStub } from "sc-game-service-integration-utils";
 import { GameData } from "sc-pool-betting-game-base";
 
-import appConfigs from "../../../src/app-configs";
+import appConfigs from "../../../src/app-configs.IGT";
 import gameSettings from "../../../src/game-settings";
 import { generateRawResultForHash, generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
 import TurboBigSmallContainerRegistry from "../../../src/turbo-big-small-container-registry";
