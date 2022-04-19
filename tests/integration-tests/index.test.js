@@ -11,7 +11,10 @@ beforeAll((done) => {
     jest.setTimeout(JEST_ASSERT_WAITING_RESPONSE_TIMEOUT);
     startSetupDataProcess(() => {
         processStartService = startServiceProcess(() => {
-            done();
+            setTimeout(() => {
+                console.log("start tests");
+                done();
+            }, 15000);
         });
     });
 });
