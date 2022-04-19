@@ -11,7 +11,7 @@ import {
     normalUser,
 } from "sc-game-service-integration-utils";
 
-import configs from "../../../src/app-configs";
+import configs from "../../../src/app-configs.IGT";
 import { TurboBigSmallBets, TurboBigSmallRounds } from "../../../src/models";
 import { currencyData, game, gameConfig, rounds, userBetData } from "./test-data";
 

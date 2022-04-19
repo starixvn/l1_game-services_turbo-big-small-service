@@ -2,15 +2,15 @@ import { Core } from "sc-game-base";
 import { initAPIStub } from "sc-game-service-integration-utils";
 import { GameData } from "sc-pool-betting-game-base";
 
-import appConfigs from "../../../src/app-configs";
+import appConfigs from "../../../src/app-configs.IGT";
 import gameSettings from "../../../src/game-settings";
-import { generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
+import { generateRawResultForHash, generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
 import TurboBigSmallContainerRegistry from "../../../src/turbo-big-small-container-registry";
 
 const run = async () => {
     initAPIStub(appConfigs.apiSettings.apiUrl);
     const gameData = new GameData(gameSettings.durations.wholeRound);
-    const definition = new Core.GameDefinition(gameSettings, generateResult, getSettlementResult);
+    const definition = new Core.GameDefinition(gameSettings, generateResult, getSettlementResult, generateRawResultForHash);
     const container = new TurboBigSmallContainerRegistry().register(appConfigs, definition, gameData);
     const app = new Core.BaseGameApp("TurboBigSmall", appConfigs);
 

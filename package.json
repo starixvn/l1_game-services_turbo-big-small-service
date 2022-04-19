@@ -9,7 +9,7 @@
     "scripts": {
         "test": "jest --testPathPattern=tests/unit-tests/",
         "test-coverage": "jest --collect-coverage --testPathPattern=tests/unit-tests/",
-        "integration-test": "jest --testPathPattern=tests/integration-tests/ --ci --reporters=default --reporters=jest-junit --forceExit",
+        "integration-test": "jest tests/integration-tests/index.test.js --ci --reporters=default --reporters=jest-junit --forceExit",
         "dev": "nodemon --es-module-specifier-resolution=node --watch ./src ./src/app.js",
         "debug": "nodemon --es-module-specifier-resolution=node --watch ./ --inspect ./src/app.js",
         "prod": "node --max-old-space-size=8192 --es-module-specifier-resolution=node ./src/app.js",
@@ -25,7 +25,10 @@
         "nodemon": "^2.0.4",
         "random": "^2.2.0",
         "random-js": "^2.1.0",
-        "sc-pool-betting-game-base": "2.2.0"
+        "sc-pool-betting-game-base": "2.2.6-beta.2"
+    },
+    "resolutions": {
+        "sc-game-base": "2.7.1-beta.1"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0",
@@ -47,7 +50,7 @@
         "jest-junit": "^13.0.0",
         "jest-micro-auto-stub": "^1.0.6",
         "jest-sonar-reporter": "^2.0.0",
-        "sc-game-service-integration-utils": "1.0.0",
+        "sc-game-service-integration-utils": "1.1.3-beta.0",
         "sc-semantic-release": "^1.1.0",
         "semantic-release": "^17.1.1"
     },

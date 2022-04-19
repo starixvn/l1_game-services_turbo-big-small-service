@@ -1,6 +1,6 @@
 import Chance from "chance";
 
-import { generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
+import { generateRawResultForHash, generateResult, getSettlementResult } from "../../../src/helpers/result-helper";
 
 describe("getSettlementResult tests", () => {
     const chance = new Chance();
@@ -45,12 +45,49 @@ describe("getSettlementResult tests", () => {
 });
 
 describe("generateResult tests", () => {
-    it("should return enough results", () => {
-        // act
-        var result = generateResult();
+    describe("when not passing mode", () => {
+        it("should return enough results", () => {
+            // act
+            var result = generateResult();
 
-        // assert
-        expect(Object.keys(result).length).toBe(3);
-        expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+            // assert
+            expect(Object.keys(result).length).toBe(3);
+            expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+        });
+    });
+
+    describe("when not passing a out of range mode", () => {
+        it("should return enough results", () => {
+            // act
+            var result = generateResult(10);
+
+            // assert
+            expect(Object.keys(result).length).toBe(3);
+            expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+        });
+    });
+
+    describe("when not passing a valid mode", () => {
+        it("should return enough results", () => {
+            // act
+            var result = generateResult(2);
+
+            // assert
+            expect(Object.keys(result).length).toBe(3);
+            expect(Object.values(result).every((dice) => dice >= 1 && dice <= 6)).toBeTrue();
+        });
+    });
+});
+
+describe("generateRawResultForHash", () => {
+    it("should format result in unicode", () => {
+        // Arrange
+        const roundResult = { dice1: 1, dice2: 2, dice3: 3 };
+
+        // Act
+        const actualResult = generateRawResultForHash(roundResult);
+
+        // Assert
+        expect(actualResult).toStrictEqual("{1,2,3}");
     });
 });

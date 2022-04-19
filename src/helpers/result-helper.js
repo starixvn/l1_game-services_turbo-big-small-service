@@ -5,10 +5,11 @@ const settlementRuleEntries = Object.entries({
     small: (totalPoints) => totalPoints <= 10,
 });
 
-export const generateResult = () => {
-    const dice1 = random();
-    const dice2 = random();
-    const dice3 = random();
+export const generateResult = (mode) => {
+    const selectedMode = mode >= 1 && mode <= 3 ? mode : 1;
+    const dice1 = random(selectedMode);
+    const dice2 = random(selectedMode);
+    const dice3 = random(selectedMode);
 
     return { dice1, dice2, dice3 };
 };
@@ -21,4 +22,8 @@ export const getSettlementResult = (roundResult) => {
 
         return result;
     }, {});
+};
+
+export const generateRawResultForHash = (roundResult) => {
+    return `{${+roundResult.dice1},${+roundResult.dice2},${+roundResult.dice3}}`;
 };
