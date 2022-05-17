@@ -38,6 +38,8 @@ export default function getHistoryTest() {
                     partnerId: "dummy-partner-id",
                     rate: 1,
                     betLogDetails: [],
+                    roundId: 823211,
+                    paid: false,
                 },
                 {
                     refund: 0,
@@ -57,6 +59,8 @@ export default function getHistoryTest() {
                     partnerId: "dummy-partner-id",
                     rate: 1,
                     betLogDetails: [],
+                    roundId: 823211,
+                    paid: false,
                 },
             ];
 

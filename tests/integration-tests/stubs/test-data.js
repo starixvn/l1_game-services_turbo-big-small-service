@@ -6,7 +6,7 @@ const game = {
 const currencyData = { code: "USD", name: "$US" };
 
 const socketOptions = {
-    socketUri: "http://localhost:5001/user/txturbo",
+    socketUri: "http://localhost:5002/user/txturbo",
     gameName: game.name,
     proxyRoute: "/socket.io",
 };
@@ -39,6 +39,7 @@ const userBetData = (uid) => {
             siteId: "111",
             thanhtoan: true,
             win: false,
+            roundId: 823211,
         },
         {
             freeBet: false,
@@ -59,6 +60,7 @@ const userBetData = (uid) => {
             siteId: "111",
             thanhtoan: true,
             win: false,
+            roundId: 823211,
         },
     ];
 };
