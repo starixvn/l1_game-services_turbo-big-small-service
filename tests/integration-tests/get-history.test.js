@@ -39,7 +39,9 @@ export default function getHistoryTest() {
                     rate: 1,
                     betLogDetails: [],
                     roundId: 823211,
-                    paid: false,
+                    paid: true,
+                    operatorId: "dummy-partner-id",
+                    playerId: 4,
                 },
                 {
                     refund: 0,
@@ -60,7 +62,9 @@ export default function getHistoryTest() {
                     rate: 1,
                     betLogDetails: [],
                     roundId: 823211,
-                    paid: false,
+                    paid: true,
+                    operatorId: "dummy-partner-id",
+                    playerId: 1,
                 },
             ];
 
