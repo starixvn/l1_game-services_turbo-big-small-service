@@ -23,7 +23,7 @@ export default class BigSmallPlaceBetConsumer extends PlaceBetConsumer {
             },
             {
                 failure:
-                    this.gameData.remainingTime <= this.definition.durations.lockingBet || this.gameData.remainingTime > shakeThePlateTime,
+                    this.gameData.remainingTime < this.definition.durations.lockingBet || this.gameData.remainingTime > shakeThePlateTime,
                 notice: this.getNoticeObj(helpers.noticeHelper.placeBetNextRound),
             },
         ];
