@@ -31,7 +31,7 @@ export const startServiceProcess = (onServiceStarted) => {
     serviceProcess.stdout.on("data", (data) => {
         console.log(`stdout: ${data}`);
 
-        if (data && data.includes("Express server started and running on port 5001")) {
+        if (data && data.includes("Express server started and running on port")) {
             onServiceStarted && onServiceStarted();
         }
     });

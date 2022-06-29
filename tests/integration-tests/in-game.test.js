@@ -31,6 +31,7 @@ export default function inGameTest() {
             name: "NormalUser",
             rate: 1,
             red: 25000,
+            type: false,
         };
 
         const expectedRoundHistory = [
