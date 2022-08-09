@@ -91,4 +91,15 @@ const rounds = [
     },
 ];
 
-export { game, currencyData, socketOptions, gameConfig, rounds, userBetData };
+const promotions = [
+    {
+        gameId: game.id,
+        startDateTime: new Date(new Date().setHours(new Date().getHours() - 1)),
+        endDateTime: new Date(new Date().setHours(new Date().getHours() + 1)),
+        isDaily: true,
+        odds: { big: 1.98, small: 1.98 },
+        status: "enabled",
+    },
+];
+
+export { game, currencyData, socketOptions, gameConfig, rounds, userBetData, promotions };
