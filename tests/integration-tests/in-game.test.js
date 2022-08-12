@@ -21,7 +21,7 @@ export default function inGameTest() {
         const expectedGameConfigs = {
             minBet: 1,
             maxBet: 2000,
-            odds: { big: 1.98, small: 1.98 },
+            odds: { big: 1.97, small: 1.97 },
         };
 
         const expectedUser = {
@@ -63,7 +63,6 @@ export default function inGameTest() {
                         expect(inGameData.gameConfigs.minBet).toEqual(expectedGameConfigs.minBet);
                         expect(inGameData.gameConfigs.maxBet).toEqual(expectedGameConfigs.maxBet);
                         expect(inGameData.gameConfigs.odds).toStrictEqual(expectedGameConfigs.odds);
-                        expect(inGameData.gameConfigs.boostedChoices).toEqual(["big", "small"]);
 
                         done();
                     }
@@ -92,7 +91,7 @@ export default function inGameTest() {
             // Assert
             driver.handleInGameEvent((inGameData) => {
                 if (inGameData?.roundHistory) {
-                    expect(inGameData.roundHistory).toStrictEqual(expectedRoundHistory);
+                    expect(inGameData.roundHistory.slice(1, 4)).toStrictEqual(expectedRoundHistory);
                     done();
                 }
             });
