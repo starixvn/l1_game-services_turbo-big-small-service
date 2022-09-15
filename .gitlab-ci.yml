@@ -1,5 +1,5 @@
 variables:
-  SMOKE_PRODUCT_NAME: TurboBigSmall
+  SMOKE_PRODUCT_NAME: 4
 
 include:
   - project: "ci/repos-ci/pentagon_l1_turbo_big_small_service"
