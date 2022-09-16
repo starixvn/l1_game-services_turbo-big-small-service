@@ -22,7 +22,6 @@ const gameConfig = {
 const userBetData = (uid) => {
     return [
         {
-            phien: 823211,
             uid: uid,
             betwin: 0,
             currency: "$US",
@@ -32,22 +31,17 @@ const userBetData = (uid) => {
             baseRefund: 0,
             baseTotalWin: 0,
             choice: "big",
-            memberId: 1,
+            playerId: 1,
             name: "NormalUser",
-            partnerId: "dummy-partner-id",
             rate: 1,
             siteId: "111",
-            thanhtoan: true,
             win: false,
-
             roundId: 823211,
-            operatorId: "dummy-partner-id",
+            operatorId: "dummy-operator-id",
             paid: true,
-            playerId: 1,
         },
         {
             freeBet: false,
-            phien: 823211,
             uid: uid,
             betwin: 0,
             currency: "$US",
@@ -57,18 +51,14 @@ const userBetData = (uid) => {
             baseRefund: 0,
             baseTotalWin: 0,
             choice: "small",
-            memberId: 4,
+            playerId: 4,
             name: "NormalUser",
-            partnerId: "dummy-partner-id",
             rate: 1,
             siteId: "111",
-            thanhtoan: true,
             win: false,
-
             roundId: 823211,
-            operatorId: "dummy-partner-id",
+            operatorId: "dummy-operator-id",
             paid: true,
-            playerId: 4,
         },
     ];
 };
