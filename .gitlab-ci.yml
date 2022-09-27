@@ -1,5 +1,5 @@
 variables:
-    SMOKE_PRODUCT_NAME: TurboBigSmall
+    SMOKE_PRODUCT_NAME: 4
     DOCKER_SLIM: enable
     ENABLE_NODEJS_INTEGRATION_TEST: 'true'
     NODEJS_INTEGRATION_TEST_IMAGE_VERSION: registry.nexdev.net:5050/docker/node:18.1-buster-slim
