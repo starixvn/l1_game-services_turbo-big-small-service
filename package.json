@@ -25,10 +25,10 @@
         "nodemon": "^2.0.4",
         "random": "^2.2.0",
         "random-js": "^2.1.0",
-        "sc-pool-betting-game-base": "2.4.6-beta.11"
+        "sc-pool-betting-game-base": "2.4.6-beta.12"
     },
     "resolutions": {
-        "sc-game-base": "3.3.0-beta.7"
+        "sc-game-base": "3.3.0-beta.8"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0",
