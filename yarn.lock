@@ -9103,10 +9103,10 @@ sc-game-service-integration-utils@1.3.2:
     sc-game-base "3.1.0"
     socket.io-client "^4.4.0"
 
-sc-pool-betting-game-base@2.4.6-beta.13:
-  version "2.4.6-beta.13"
-  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-2.4.6-beta.13.tgz#c3cda74f98d9ad7428690943c1750f5544f35ef1"
-  integrity sha512-j1ys1JPeI2RMDfdQ3VHhQp2w8ffoxqjN7K9yapZSR+vxufzkrbOAIszAB7Vv3lQ5ZQC0k+ogckUXo8PhM9ouqg==
+sc-pool-betting-game-base@2.4.8-beta.3:
+  version "2.4.8-beta.3"
+  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-2.4.8-beta.3.tgz#946147925d30cf68eeffc4f5125277d7a907fd91"
+  integrity sha512-wiefVUpZVX+NmpINm9r8nRLV3WSwVxAX7G20VZtCkiQhGtz53smmyZCvf7p8Gu9amYfXuQ42XUJHuHnK+CBdOw==
   dependencies:
     chance "^1.1.7"
     sc-game-base "3.3.0-beta.10"
