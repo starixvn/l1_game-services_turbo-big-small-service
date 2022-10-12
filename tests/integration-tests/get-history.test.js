@@ -37,7 +37,6 @@ export default function getHistoryTest() {
                     rate: 1,
                     betLogDetails: [],
                     roundId: 823211,
-                    playerId: 4,
                 },
                 {
                     refund: 0,
@@ -56,7 +55,6 @@ export default function getHistoryTest() {
                     rate: 1,
                     betLogDetails: [],
                     roundId: 823211,
-                    playerId: 1,
                 },
             ];
 

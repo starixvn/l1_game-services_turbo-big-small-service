@@ -91,7 +91,7 @@ export default function inGameTest() {
             // Assert
             driver.handleInGameEvent((inGameData) => {
                 if (inGameData?.roundHistory) {
-                    expect(inGameData.roundHistory).toStrictEqual(expectedRoundHistory);
+                    expect(inGameData.roundHistory.slice(1, 4)).toStrictEqual(expectedRoundHistory);
                     done();
                 }
             });
