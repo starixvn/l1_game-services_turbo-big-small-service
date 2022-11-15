@@ -9042,7 +9042,7 @@ sc-api-client@1.4.0:
 
 sc-base-apis@1.18.0:
   version "1.18.0"
-  resolved "https://npm.lumigame.com/sc-base-apis/-/sc-base-apis-1.18.0.tgz#70cf9bae9e5366b2b46f04bb8df1b1fe2c45b70b"
+  resolved "http://npm.lumigame.com/sc-base-apis/-/sc-base-apis-1.18.0.tgz#70cf9bae9e5366b2b46f04bb8df1b1fe2c45b70b"
   integrity sha512-rAbnKrJ0PkiEy5nKIdGXEv6Hzytde+VYmHqTO751g4eW2ooOQJEa0K8IKd6p975BSLYu/JlTeCWyLOHvEXASrA==
   dependencies:
     moment "^2.27.0"
@@ -9095,7 +9095,7 @@ sc-game-base@3.1.0, sc-game-base@3.2.0:
 
 sc-game-service-integration-utils@1.3.2:
   version "1.3.2"
-  resolved "https://npm.lumigame.com/sc-game-service-integration-utils/-/sc-game-service-integration-utils-1.3.2.tgz#b6179049647bc3b99d28a88d54f1a20a448162cd"
+  resolved "http://npm.lumigame.com/sc-game-service-integration-utils/-/sc-game-service-integration-utils-1.3.2.tgz#b6179049647bc3b99d28a88d54f1a20a448162cd"
   integrity sha512-0Et2gMd2Ytsf7vVSDnAEdzsqchOha62TIgyj17Tj/4lUAC2CbSRxJEKwo/TaAHv3rpM6cK+fxR+uHwKMhT9VVg==
   dependencies:
     lodash.matches "^4.6.0"
@@ -9103,10 +9103,10 @@ sc-game-service-integration-utils@1.3.2:
     sc-game-base "3.1.0"
     socket.io-client "^4.4.0"
 
-sc-pool-betting-game-base@2.5.0:
-  version "2.5.0"
-  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-2.5.0.tgz#35eb8e7632bce3ac6f1e9a16a3fb889e66db874a"
-  integrity sha512-GO7witNHoH+kItb6WXoFAS2KCMwCH345H9WaDl03CkVhHlzrwBmfVq9fMrjgUJHYnQ52rlPWHolkZd7n+yAQtQ==
+sc-pool-betting-game-base@2.5.1-beta.19:
+  version "2.5.1-beta.19"
+  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-2.5.1-beta.19.tgz#d5e2b9601fbf8e7242bb6bcac075a4a6c2ccf24e"
+  integrity sha512-WcRYmmgwzj+I49NGihYSOdNL7is3Y6ckeKMlXzwF+5k94xikk+pQH8SLOz2gKvlUauAKzGiYK3r8k6EgnX1qWg==
   dependencies:
     chance "^1.1.7"
     sc-game-base "3.2.0"

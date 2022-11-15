@@ -3,6 +3,7 @@ import inGameTest from "./in-game.test";
 import placeBetTest from "./place-bet.test";
 import { startServiceProcess, startSetupDataProcess } from "./stubs/test-jobs";
 import { boostedOddsTest } from "./boosted-odds.test";
+import balancedPlaceBetTest from "./balanced-place-bet.test";
 
 let processStartService;
 
@@ -31,3 +32,4 @@ boostedOddsTest();
 inGameTest();
 getHistoryTest();
 placeBetTest();
+balancedPlaceBetTest();

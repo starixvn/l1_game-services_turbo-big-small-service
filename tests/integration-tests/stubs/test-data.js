@@ -14,9 +14,14 @@ const socketOptions = {
 const gameConfig = {
     type: 0,
     name: "txturbo",
+    minbet: 1,
+    maxbet: 2000,
     minBet: 1,
     maxBet: 2000,
     odds: { big: 1.97, small: 1.97 },
+    smartBotGroupRatio: 0.99,
+    bot_maxbet: 1000000,
+    botenabled: true,
 };
 
 const userBetData = (uid) => {
