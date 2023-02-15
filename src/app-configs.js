@@ -46,8 +46,6 @@ export default {
         env: "DEV",
     },
     adminSecretKey: "asWDEerfOIdgsdqRTFabvmgh",
-    enableCorsWs: false,
-    corsUrls: ["http://localhost:7456", "http://localhost:7000", "http://games.lumigame.com", "http://admin.lumigame.com"],
     enableMsgpackParser: false,
     chatBotSettings: {
         url: "https://bot.nexdev.net/skynex/api/messages/",
