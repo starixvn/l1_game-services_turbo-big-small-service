@@ -22,7 +22,7 @@ const betLog = {
     currency: { type: String, require: true },
     rate: { type: Number, require: true },
 
-    playerId: { type: Number },
+    playerId: { type: String },
     operatorId: { type: String, require: true },
     roundId: { type: Number, required: true },
     paid: { type: Boolean, default: false },
