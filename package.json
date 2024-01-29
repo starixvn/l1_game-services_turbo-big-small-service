@@ -25,7 +25,8 @@
         "nodemon": "^2.0.4",
         "random": "^2.2.0",
         "random-js": "^2.1.0",
-        "sc-pool-betting-game-base": "2.6.0"
+        "sc-pool-betting-game-base": "2.6.2-beta.0",
+        "sc-instrument": "1.1.1"
     },
     "resolutions": {
         "sc-game-base": "3.3.0"
