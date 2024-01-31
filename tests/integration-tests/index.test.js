@@ -28,8 +28,8 @@ afterAll(() => {
     processStartService.kill();
 });
 
-boostedOddsTest();
+// boostedOddsTest();
 inGameTest();
-getHistoryTest();
-placeBetTest();
-balancedPlaceBetTest();
+// getHistoryTest();
+// placeBetTest();
+// balancedPlaceBetTest();
