@@ -6776,10 +6776,10 @@ sc-instrument@1.1.1:
     opentelemetry-instrumentation-socket.io "0.34.0"
     socket.io "4.6.1"
 
-sc-pool-betting-game-base@3.0.0:
-  version "3.0.0"
-  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-3.0.0.tgz#9e4ea80d168a6815db1519062049f84b2665064d"
-  integrity sha512-SHqEwP7ktXl8Xnrn8s9xaafQJoAQpJR+NQXuUZRefAcMtTcjNO+bysVx47CljN8cuDEcXrI0M8ntFAkH1enHqw==
+sc-pool-betting-game-base@3.0.1:
+  version "3.0.1"
+  resolved "http://npm.lumigame.com/sc-pool-betting-game-base/-/sc-pool-betting-game-base-3.0.1.tgz#b7f1390fd1dc8ea03fedff7888e831b9afd1b8b8"
+  integrity sha512-p283Qeq9GmTThXOeeI/zLWAbh9qeL0I2IQKZKkIB/vW1vl0xdpzj4tTr3TwXigM/ojRmlakakn4RkxsDkaHcVg==
   dependencies:
     chance "^1.1.7"
     sc-game-base "4.1.0"
