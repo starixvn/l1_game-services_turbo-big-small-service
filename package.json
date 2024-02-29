@@ -28,7 +28,6 @@
         "sc-instrument": "1.1.1"
     },
     "resolutions": {
-        "sc-game-base": "3.3.0",
         "sc-base-apis": "1.18.2",
         "sc-base-database": "1.11.1"
     },
