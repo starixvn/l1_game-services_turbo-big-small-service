@@ -29,7 +29,7 @@
     },
     "resolutions": {
         "sc-base-apis": "1.18.2",
-        "sc-base-database": "1.11.1",
+        "sc-base-database": "1.11.3",
         "socket.io-parser": "4.0.5"
     },
     "devDependencies": {
@@ -47,7 +47,7 @@
         "jest-micro-auto-stub": "^1.0.6",
         "jest-sonar-reporter": "^2.0.0",
         "nodemon": "^2.0.4",
-        "sc-game-service-integration-utils": "1.3.7"
+        "sc-game-service-integration-utils": "1.3.9"
     },
     "husky": {
         "hooks": {
